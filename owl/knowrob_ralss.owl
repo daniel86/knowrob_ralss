@@ -1,0 +1,966 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://knowrob.org/kb/knowrob_ralss.owl#"
+     xml:base="http://knowrob.org/kb/knowrob_ralss.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:knowrob="http://knowrob.org/kb/knowrob.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:computable="http://knowrob.org/kb/computable.owl#">
+    <owl:Ontology rdf:about="http://knowrob.org/kb/knowrob_ralss.owl">
+        <owl:imports rdf:resource="package://knowrob_common/owl/knowrob.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/computable.owl#cache -->
+
+    <owl:AnnotationProperty rdf:about="http://knowrob.org/kb/computable.owl#cache"/>
+    
+
+
+    <!-- http://knowrob.org/kb/computable.owl#command -->
+
+    <owl:AnnotationProperty rdf:about="http://knowrob.org/kb/computable.owl#command"/>
+    
+
+
+    <!-- http://knowrob.org/kb/computable.owl#target -->
+
+    <owl:AnnotationProperty rdf:about="http://knowrob.org/kb/computable.owl#target"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob.owl#endTime -->
+
+    <owl:ObjectProperty rdf:about="http://knowrob.org/kb/knowrob.owl#endTime"/>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob.owl#startTime -->
+
+    <owl:ObjectProperty rdf:about="http://knowrob.org/kb/knowrob.owl#startTime"/>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#after -->
+
+    <owl:ObjectProperty rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#after">
+        <rdfs:domain rdf:resource="http://knowrob.org/kb/knowrob.owl#TemporallyExtendedThing"/>
+        <rdfs:range rdf:resource="http://knowrob.org/kb/knowrob.owl#TemporallyExtendedThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#before -->
+
+    <owl:ObjectProperty rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#before">
+        <rdfs:domain rdf:resource="http://knowrob.org/kb/knowrob.owl#TemporallyExtendedThing"/>
+        <rdfs:range rdf:resource="http://knowrob.org/kb/knowrob.owl#TemporallyExtendedThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#during -->
+
+    <owl:ObjectProperty rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#during">
+        <rdfs:domain rdf:resource="http://knowrob.org/kb/knowrob.owl#TemporallyExtendedThing"/>
+        <rdfs:range rdf:resource="http://knowrob.org/kb/knowrob.owl#TemporallyExtendedThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#recitedBy -->
+
+    <owl:ObjectProperty rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#recitedBy">
+        <rdfs:domain rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Lecture"/>
+        <rdfs:range rdf:resource="http://knowrob.org/kb/knowrob.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#starts -->
+
+    <owl:ObjectProperty rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#starts">
+        <rdfs:domain rdf:resource="http://knowrob.org/kb/knowrob.owl#TemporallyExtendedThing"/>
+        <rdfs:range rdf:resource="http://knowrob.org/kb/knowrob.owl#TemporallyExtendedThing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/computable.owl#visible -->
+
+    <owl:DatatypeProperty rdf:about="http://knowrob.org/kb/computable.owl#visible"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/computable.owl#PrologProperty -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/computable.owl#PrologProperty"/>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob.owl#Event -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob.owl#Event"/>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob.owl#Person -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob.owl#Person"/>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob.owl#TemporallyExtendedThing -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob.owl#TemporallyExtendedThing"/>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob.owl#TimePoint -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#AdvancedExercise -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#AdvancedExercise">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Exercise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#AdvancedLecture -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#AdvancedLecture">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Lecture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#BoatTrip -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#BoatTrip">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#SocialEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#Dinner -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#Dinner">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#SocialEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#Discussion -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#Discussion">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#EducationalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#EducationalEvent -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#EducationalEvent">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#Exercise -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#Exercise">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#EducationalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#FoundationExercise -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#FoundationExercise">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Exercise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#FoundationLecture -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#FoundationLecture">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Lecture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#Lecture -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#Lecture">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#EducationalEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#recitedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://knowrob.org/kb/knowrob.owl#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#PosterSession -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#PosterSession">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#EducationalEvent"/>
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#SocialEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#SocialEvent -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#SocialEvent">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#SummerSchool -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#SummerSchool">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#EducationalEvent"/>
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#SocialEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#AutonomousLearningExercise_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#AutonomousLearningExercise_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Discussion"/>
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#FoundationExercise"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504805400"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504800000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#AutonomousLearningLecture_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#AutonomousLearningLecture_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#FoundationLecture"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504798200"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504792800"/>
+        <recitedBy rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#MarcToussaint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#BoatTrip_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#BoatTrip_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#BoatTrip"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504821600"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504807200"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#DeepLearningExercise_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#DeepLearningExercise_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#AdvancedExercise"/>
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Discussion"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504632600"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504627200"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#DeepLearningLecture_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#DeepLearningLecture_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#AdvancedLecture"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504625400"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504620000"/>
+        <recitedBy rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#SvenBehnke"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#DesigningControlExercise_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#DesigningControlExercise_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#AdvancedExercise"/>
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Discussion"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504616400"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504610100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#DesigningControlLecture_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#DesigningControlLecture_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#AdvancedLecture"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504609200"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504603800"/>
+        <recitedBy rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#SamiHaddadin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#Dinner_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#Dinner_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Dinner"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504555200"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504548000"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#HumanDemonstrationsExercise_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#HumanDemonstrationsExercise_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#AdvancedExercise"/>
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Discussion"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504789200"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504782900"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#HumanDemonstrationsLecture_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#HumanDemonstrationsLecture_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#AdvancedLecture"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504782000"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504776600"/>
+        <recitedBy rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#TamimAsfour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#MarcToussaint -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#MarcToussaint">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#MichaelBeetz -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#MichaelBeetz">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#MobileManipulationExercise_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#MobileManipulationExercise_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#AdvancedExercise"/>
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Discussion"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504702800"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504696500"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#MobileManipulationLecture_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#MobileManipulationLecture_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#AdvancedLecture"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504695600"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504690200"/>
+        <recitedBy rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#OliverBrock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#OliverBrock -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#OliverBrock">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#OverviewLecture_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#OverviewLecture_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Lecture"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504522800"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504517400"/>
+        <recitedBy rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#MarcToussaint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#PosterSession_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#PosterSession_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#PosterSession"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504641600"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504634400"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#PrepExercise_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#PrepExercise_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Discussion"/>
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#FoundationExercise"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504530000"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504523700"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#RoboticAILecture_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#RoboticAILecture_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#AdvancedLecture"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504868400"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504863000"/>
+        <recitedBy rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#MichaelBeetz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#RoboticsAIExercise_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#RoboticsAIExercise_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#AdvancedExercise"/>
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Discussion"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504869300"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#RoboticsFoundationsExercise_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#RoboticsFoundationsExercise_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Discussion"/>
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#FoundationExercise"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504546200"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504540800"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#RoboticsFoundationsLecture_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#RoboticsFoundationsLecture_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#FoundationLecture"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504539000"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504533600"/>
+        <recitedBy rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#MarcToussaint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#SamiHaddadin -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#SamiHaddadin">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#SocialImplicationsDiscussion_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#SocialImplicationsDiscussion_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Discussion"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504719000"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504713600"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#SocialImplicationsLecture_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#SocialImplicationsLecture_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#Lecture"/>
+        <knowrob:endTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504711800"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504706400"/>
+        <recitedBy rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#WolfgangSchulz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#SummerSchool_RALSS -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#SummerSchool_RALSS">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#SummerSchool"/>
+        <knowrob:startTime rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504517400"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#SvenBehnke -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#SvenBehnke">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#TamimAsfour -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#TamimAsfour">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#WolfgangSchulz -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#WolfgangSchulz">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#computeAfter -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#computeAfter">
+        <rdf:type rdf:resource="http://knowrob.org/kb/computable.owl#PrologProperty"/>
+        <computable:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unvisible</computable:visible>
+        <computable:cache rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nocache</computable:cache>
+        <computable:command rdf:datatype="http://www.w3.org/2001/XMLSchema#string">knowrob_ralss:after</computable:command>
+        <computable:target rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#after"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#computeBefore -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#computeBefore">
+        <rdf:type rdf:resource="http://knowrob.org/kb/computable.owl#PrologProperty"/>
+        <computable:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unvisible</computable:visible>
+        <computable:cache rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nocache</computable:cache>
+        <computable:command rdf:datatype="http://www.w3.org/2001/XMLSchema#string">knowrob_ralss:before</computable:command>
+        <computable:target rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#before"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#computeDuring -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#computeDuring">
+        <rdf:type rdf:resource="http://knowrob.org/kb/computable.owl#PrologProperty"/>
+        <computable:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unvisible</computable:visible>
+        <computable:cache rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nocache</computable:cache>
+        <computable:command rdf:datatype="http://www.w3.org/2001/XMLSchema#string">knowrob_ralss:during</computable:command>
+        <computable:target rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#during"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#computeStarts -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#computeStarts">
+        <rdf:type rdf:resource="http://knowrob.org/kb/computable.owl#PrologProperty"/>
+        <computable:visible rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unvisible</computable:visible>
+        <computable:cache rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nocache</computable:cache>
+        <computable:command rdf:datatype="http://www.w3.org/2001/XMLSchema#string">knowrob_ralss:starts</computable:command>
+        <computable:target rdf:resource="http://knowrob.org/kb/knowrob_ralss.owl#starts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504517400 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504517400">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504522800 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504522800">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504523700 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504523700">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504530000 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504530000">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504533600 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504533600">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504539000 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504539000">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504540800 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504540800">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504546200 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504546200">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504548000 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504548000">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504555200 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504555200">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504603800 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504603800">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504609200 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504609200">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504610100 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504610100">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504616400 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504616400">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504620000 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504620000">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504625400 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504625400">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504627200 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504627200">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504632600 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504632600">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504634400 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504634400">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504641600 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504641600">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504690200 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504690200">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504695600 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504695600">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504696500 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504696500">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504702800 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504702800">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504706400 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504706400">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504711800 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504711800">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504713600 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504713600">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504719000 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504719000">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504776600 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504776600">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504782000 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504782000">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504782900 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504782900">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504789200 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504789200">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504792800 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504792800">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504798200 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504798200">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504800000 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504800000">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504805400 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504805400">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504807200 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504807200">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504821600 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504821600">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504863000 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504863000">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504868400 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504868400">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504869300 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/knowrob_ralss.owl#timepoint_1504869300">
+        <rdf:type rdf:resource="http://knowrob.org/kb/knowrob.owl#TimePoint"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
