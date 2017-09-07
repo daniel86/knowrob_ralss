@@ -32,7 +32,7 @@
             before(r,r),
             after(r,r),
             during(r,r),
-            overlaps(r,r).
+            starts(r,r).
 
 %%%
 % Register some namespace prefixes (see above)
@@ -70,7 +70,8 @@ temporal_extend_end(Subject,End) :- fail.
 % Interval should be a list of two numbers [Begin,End] in case
 % we know when the thing stopped existing, and a list of one number [Begin]
 % in case we don't know yet when the thing stopps existing.
-temporal_extend(Subject,Interval) :- fail.
+temporal_extend(Subject,[Begin,End]) :- fail.
+temporal_extend(Subject,[Begin]) :- fail.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Interval algebra
