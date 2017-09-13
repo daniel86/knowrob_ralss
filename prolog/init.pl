@@ -53,4 +53,7 @@
 % be exposed for querying.
 :- use_module(library('prolog-basics')).  % load prolog-basics.pl
 :- use_module(library('temporal')).       % load temporal.pl
+:- use_module(library('queries')).        % load queries.pl
 
+:- use_module(library('rdfs_computable')).
+:- use_module(library('owl_computable')).

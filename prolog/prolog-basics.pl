@@ -20,6 +20,12 @@
 %
 
 refrigerator(fridge4).
+cupboard(cupboard3).
+
+dairyProduct(milk1).
+meatProduct(ham2).
+
+cup(cup0).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Rules
@@ -37,15 +43,15 @@ refrigerator(fridge4).
 
 %%%
 % Dairy products and meat products are perishable
-perishable(Item) :- fail.
+perishable(Item) :- dairyProduct(Item) ; meatProduct(Item).
 
 %%%
 % Clause 1: Perishable items are stored in refrigerators,
 % Clause 2: Cups are stored in cupboards.
-storagePlace(Item,Location) :- fail.
-storagePlace(Item,Location) :- fail.
+storagePlace(Item,Location) :- perishable(Item), refrigerator(Location).
+storagePlace(Item,Location) :- cup(Item), cupboard(Location).
 
 %%%
 % Search for items at their storage place.
-searchForIn(Item,Location) :- fail.
+searchForIn(Item,Location) :- storagePlace(Item,Location).
 

@@ -51,7 +51,11 @@
 % Should fail in case Subject does not have a temporal extend.
 % Begin should be a number (not an atom), so that
 % arithmetic operations can be performed.
-temporal_extend_begin(Subject,Begin) :- fail.
+temporal_extend_begin(Subject,Begin) :-
+  owl_has(Subject, knowrob:'startTime', IRI),
+  rdf_split_url(_, Name, IRI),
+  atom_concat('timepoint_', TimeAtom, Name),
+  atom_number(TimeAtom, Begin).
 
 %%%
 % Unifies a temporally extended thing with the time instant
@@ -61,7 +65,11 @@ temporal_extend_begin(Subject,Begin) :- fail.
 % when it will stop existing).
 % End should be a number (not an atom), so that
 % arithmetic operations can be performed.
-temporal_extend_end(Subject,End) :- fail.
+temporal_extend_end(Subject,End) :-
+  owl_has(Subject, knowrob:'endTime', IRI),
+  rdf_split_url(_, Name, IRI),
+  atom_concat('timepoint_', TimeAtom, Name),
+  atom_number(TimeAtom, End).
 
 %%%
 % Unifies a temporally extended thing with the time interval
@@ -70,8 +78,12 @@ temporal_extend_end(Subject,End) :- fail.
 % Interval should be a list of two numbers [Begin,End] in case
 % we know when the thing stopped existing, and a list of one number [Begin]
 % in case we don't know yet when the thing stopps existing.
-temporal_extend(Subject,[Begin,End]) :- fail.
-temporal_extend(Subject,[Begin]) :- fail.
+temporal_extend(Subject,[Begin,End]) :-
+  temporal_extend_end(Subject,End),
+  temporal_extend_begin(Subject,Begin).
+temporal_extend(Subject,[Begin]) :-
+  \+ temporal_extend_end(Subject,_),
+  temporal_extend_begin(Subject,Begin).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Interval algebra
@@ -80,21 +92,37 @@ temporal_extend(Subject,[Begin]) :- fail.
 %%%
 % Unifies Evt1 and Evt2 in case Evt1 occurs before Evt2.
 % Thus Evt1 ended before Evt2 started.
-before(Evt1,Evt2) :- fail.
+before(Evt1,Evt2) :- 
+  temporal_extend(Evt1,[_,End]),
+  temporal_extend(Evt2,[Begin|_]),
+  End =< Begin.
 
 %%%
 % Unifies Evt1 and Evt2 in case Evt2 occurs before Evt1.
 % Thus Evt2 ended before Evt1 started.
-after(Evt1,Evt2) :- fail.
+after(Evt1,Evt2) :- before(Evt2,Evt1).
 
 %%%
 % Unifies Evt1 and Evt2 in case Evt1 occurs during Evt2.
 % Thus Evt2 started before or together with Evt1 and ended earlier or
 % to the same time.
-during(Evt1,Evt2) :- fail.
+during(Evt1,Evt2) :-
+  temporal_extend(Evt1,[Begin1,End1]),
+  temporal_extend(Evt2,[Begin2,End2]),
+  Begin2 =< Begin1, End1 =< End2.
+during(Evt1,Evt2) :-
+  temporal_extend(Evt1,[Begin1,_]),
+  temporal_extend(Evt2,[Begin2]),
+  Begin2 =< Begin1.
 
 %%%
 % Unifies Evt1 and Evt2 in case Evt1 starts Evt2.
 % Thus Evt1 and Evt2 start at the same time but Evt1 ends earlier or to the same time.
-starts(Evt1,Evt2) :- fail.
+starts(Evt1,Evt2) :-
+  temporal_extend(Evt1,[Begin,End1]),
+  temporal_extend(Evt2,[Begin,End2]),
+  End1 =< End2.
+starts(Evt1,Evt2) :-
+  temporal_extend(Evt1,[Begin,_]),
+  temporal_extend(Evt2,[Begin]).
 
