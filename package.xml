@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>knowrob_ralss</name>
-  <version>0.1</version>
+  <version>0.1.0</version>
   <description>Package for the RALSS'17 workshop on KR</description>
   <maintainer email="danielb@cs.uni-bremen.de">Daniel Beßler</maintainer>
 
